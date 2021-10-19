@@ -13,7 +13,12 @@
     <header class="hero">
         <div class="container">
             <div class="hero-header">
-                <img src="img/python-logo.svg" alt="logo" class="logo">
+                <!-- <img src="img/python-logo.svg" alt="logo" class="logo"> -->
+                <div class="logo">
+                    <div class="logo-word">Python</div>
+                    <div class="pac"></div>
+                    <div class="man"></div>
+                </div>
                 <div class="menu-items">
                     <a href="#skills" class="menu-item">Навыки и умения</a>
                     <a href="#skills" class="menu-item">Опыт работы</a>
@@ -28,17 +33,13 @@
                 <!-- /.social-links -->
             </div>
             <!-- /.hero-header -->
-
             <div class="hero-content">
                 <div class="hero-text">
                     <span class="hero-subtitle">Python Software Engineer</span>
                     <h1 class="hero-title">Сергей Ордин</h1>
                     <p class="hero-description">Проектирую и создаю сложные высоконагруженные веб-приложения. Разрабатываю алгоритмы машинного обучения под задачи классификации и регрессии. Реализую любые торговые идеи для алготрейдинга.</p>
-                    <!-- <button class="button hero-button">
-                        <a href="./content/CV.pdf" class="">Открыть резюме</a>
-                    </button> -->
                     <h3>Профессиональные интересы</h3>
-                    <ul>
+                    <ul class="text-header">
                         <li>Backend-разработка</li>
                         <li>Машинное обучение</li>
                         <li>Алгоритмический трейдинг</li>
@@ -49,8 +50,6 @@
                 <!-- /.hero-avatar -->
             </div>
             <!-- /.hero-content -->
-
-
         </div>
         <!-- /.container -->
     </header>
@@ -101,18 +100,16 @@
                                 <li>настройка сервисов контекстной рекламы Яндекс.Директ, Google Adwords</li>
                                 <li>анализ показателей эффективности с помощью Яндекс Метрика и Google Analytics</li>
                             </ul>
-                            <p class="card-span-title">2021 - Сейчас</p>
+                            <p class="card-span-title">2017 - 2019</p>
                         </div>
 
                     </div>
                 <!-- /.features-block -->
                 </div>
-                
             </div>
             <!-- /.container -->
         </section>
         <!-- /.features -->
-
         <section class="section projects">
             <div class="container">
                 <a name="projects-anchor" class="anchor"></a>
@@ -142,7 +139,7 @@
                     <div class="swiper-slide projects-slide">
                         <div class="project-text card-column">
                             <h3 class="project-title">Чат-бот с игровой механикой ВКонтакте</h3>
-                            <p class="project-text">Разработка REST API функционала чат-бота, а также интеграция с API Вконтакте дял приема и отправления информация на бэкенд</p>
+                            <p class="project-text">Разработка REST API функционала чат-бота, а также интеграция с API Вконтакте для приема и отправления информации на бэкенд</p>
                             <span class="project-span-title">Стэк</span>
                             <ul class="project-stack">
                                 <li>Asyncio</li>
@@ -158,6 +155,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-slide projects-slide">
+                        <div class="project-text card-column" style="flex:1">
+                            <h3 class="project-title">Домашняя работа 1</h3>
+                            <div class="project-link">
+                                <a href="./hw/hw1/pic.html" class="project-link-inner">Ссылка</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide projects-slide">
+                        <div class="project-text card-column" style="flex:1">
+                            <h3 class="project-title">Домашняя работа 2</h3>
+                            <div class="project-link">
+                                <a href="./hw/hw2/index.html" class="project-link-inner">Ссылка</a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- <div class="swiper-slide">Slide 3</div> -->
                     </div>
                     <!-- If we need pagination -->
@@ -166,9 +179,6 @@
             </div>
             <!-- /.container -->
         </section>
-
-
-
     </main>
 
     <footer class="section">
@@ -178,8 +188,8 @@
             <div class="contacts-block">
                 <form action="#" class="contacts-form">
                     <h4 class="form-title">Резюме в PDF</h4>
-                    <button class="button">
-                        <a href="./content/CV.pdf" class="">Скачать</a>
+                    <button class="button" disabled>
+                        <a href="./content/CV.pdf" style="color:black">Скачать</a>
                     </button>
                 </form>
 
@@ -210,13 +220,15 @@
                 </div>
                 <!-- /.contacts-text -->
             </div>
-
         </div>
     </footer>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
+
+
+
 
 <!-- 
     .hero-header|c - создание блока с комментарием документацией

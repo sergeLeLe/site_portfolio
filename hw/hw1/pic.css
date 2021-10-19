@@ -1,0 +1,212 @@
+.box{
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 1%;
+    width: 100px;
+    height: 100px;
+    background: none;
+    background: #c3331a;
+  }
+
+.body-main{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 67%;
+    background: #292727;
+    border-radius: 50%;
+}
+
+.left-hand{
+    position: absolute;
+    width: 10%;
+    height: 30%;
+    left: 20%;
+    top: 45%;
+    background: #000000;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+
+.right-hand{
+    position: absolute;
+    width: 10%;
+    height: 30%;
+    right: 20%;
+    top: 45%;
+    background: #000000;
+    border-radius: 50%;
+    transform: rotate(320deg);
+    z-index: -1;
+}
+
+.left-leg{
+    position: absolute;
+    left: 35%;
+    top: 89%;
+    transform: rotate(205deg);
+    z-index: 1;
+    width: 0; 
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #9b6c14;
+}
+
+.right-leg{
+    position: absolute;
+    right: 35%;
+    top: 89%;
+    transform: rotate(155deg);
+    z-index: 1;
+    width: 0; 
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #9b6c14;
+}
+
+.belly{
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    width: 68%;
+    height: 60%;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.nose-left{
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    transform: rotate(270deg);
+    z-index: 1;
+    width: 0; 
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid #d8ae61;
+}
+
+.nose-right{
+    position: absolute;
+    right: 30%;
+    top: 15%;
+    transform: rotate(90deg);
+    z-index: 1;
+    width: 0; 
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid #aa7a21;
+}
+
+.eye-left{
+    position: absolute;
+    top: 19%;
+    left: 20%;
+    width: 35%;
+    height: 25%;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.eye-right{
+    position: absolute;
+    top: 19%;
+    right: 20%;
+    width: 35%;
+    height: 25%;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.apple-l{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 28%;
+    height: 45%;
+    background: #000000;
+    border-radius: 60%;
+}
+
+.apple-r{
+    position: absolute;
+    top: 25%;
+    right: 40%;
+    width: 28%;
+    height: 45%;
+    background: #000000;
+    border-radius: 60%;
+}
+
+.pupil-l{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 25%;
+    height: 30%;
+    background: #ffffff;
+    border-radius: 60%;
+}
+
+.pupil-r{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 25%;
+    height: 30%;
+    background: #ffffff;
+    border-radius: 60%;
+}
+
+.cap {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    top: 14%;
+    left: 30%;
+    height: 20%;  /* высота в два раза меньше ширины, иначе получится полуовал */
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;  /* угол состоит из половины ширины (50% от 10em = 10em : 2 = 5em) и всей высоты (100% от 5em = 5em) */
+    background: radial-gradient(circle farthest-side at 25% 50%, #ffffff 1%, #c3331a 40%);
+    z-index: 2;
+  }
+
+  .band {
+    position: absolute;
+    background: #e07108;
+    top: 92%;
+    left: -10%;
+    width: 120%;
+    height: 20%;
+    border-radius: 30%;
+  }
+
+  .point {
+    position: absolute;
+    background: #e07108;
+    top: -15%;
+    left: 39%;
+    width: 20%;
+    height: 30%;
+    border-radius: 50%;
+  }
+
+  .inner-point {
+    position: absolute;
+    background: #e9bd2f;
+    top: 23%;
+    left: 10%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+  }

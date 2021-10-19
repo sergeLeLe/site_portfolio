@@ -2,6 +2,57 @@
     box-sizing: border-box; /* задает другой алгоритм расчета ширины и высоты элементов */
 }
 
+.logo {
+    /* display: flex; */
+}
+
+.pac {
+    width: 0; 
+    height: 0;
+    margin-top: -20px;
+    margin-bottom: -14px;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #426eff;
+    border-left: 20px solid #426eff;
+    border-bottom: 20px solid #426eff;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transform: rotate(225deg);
+}
+
+.logo-word {
+    margin-left: 45px;
+    color: silver;
+    font-size: xx-large;
+}
+
+.man {
+    width: 0; 
+    height: 0;
+    margin-left: 30px;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #F4B915;
+    border-left: 20px solid #F4B915;
+    border-bottom: 20px solid #F4B915;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: rotate(45deg);
+}
+
+.logo:hover .pac{
+    transform: rotate(135deg);
+    transition: transform 1s linear;
+}
+
+.logo:hover .man{
+    transform: rotate(-45deg);
+    transition: transform 1s linear;
+}
+
 body {
     background-color: #20202D; /* цвет фона   */
     margin: 0; /* отступ */
@@ -39,7 +90,7 @@ body {
     display: flex;
     justify-content: space-between; /* выравниваниие */
     align-items: center; /* выравнивание по вертикали */
-    margin-bottom: 105px; /* внешний отступ от других блоков в этом же контейнере */
+    margin-bottom: 70px; /* внешний отступ от других блоков в этом же контейнере */
 }
 
 .social-link {
@@ -156,7 +207,6 @@ body {
     font-weight: bold; 
     color: #FFBB01;
 }
-
 
 /* contacts */
 
@@ -275,19 +325,63 @@ a:hover {
 
 /* responsive */
 
-@media (max-width: 1100px) {
-    .hero-avatar {
-        width: 100 px;
-        height: 100 px;
-        border-width: 10px;
-        border-radius: 50%;
-        background-repeat: no-repeat;
-        background-size: cover; /* масштабируем */
-        background-position: center top -1 0px; /* сдвигаем */
+@media (max-width: 460px){
+    .pac {
+        width: 0; 
+        height: 0;
+        margin-top: -20px;
+        margin-bottom: -10px;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #426eff;
+        border-left: 15px solid #426eff;
+        border-bottom: 15px solid #426eff;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        transform: rotate(225deg);
+    }
+    
+    .logo-word {
+        margin-left: 35px;
+        color: silver;
+        font-size: x-large;
+    }
+    
+    .man {
+        width: 0; 
+        height: 0;
+        margin-left: 23px;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #F4B915;
+        border-left: 15px solid #F4B915;
+        border-bottom: 15px solid #F4B915;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: rotate(45deg);
+    }
+
+    .social-links {
+        display: flex;
     }
 }
 
-@media (max-width: 836px) {
+@media (max-width: 870px) {
+    .text-header {
+        text-align: left;
+    }
+
+    .social-link {
+        margin-left: 5px; /* внешн ие отступы (самих элементов) между иконками */
+    }
+
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+    }
+
     .hero-content{
         flex-direction: column;
     }
@@ -306,10 +400,10 @@ a:hover {
 
     .hero-header {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* выравниваниие */
-        align-items: center; /* выравнивание по вертикали */
-        margin-bottom: 50px;
+        flex-direction: revert;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
     }
 
     .hero-text{
@@ -335,3 +429,4 @@ a:hover {
     } 
 
 }
+
