@@ -2,11 +2,10 @@
     position: relative;
     margin: auto;
     display: block;
-    margin-top: 1%;
-    width: 100px;
-    height: 100px;
+    margin-top: 8%;
+    width: 200px;
+    height: 200px;
     background: none;
-    background: #c3331a;
   }
 
 .body-main{
@@ -18,6 +17,17 @@
     background: #292727;
     border-radius: 50%;
 }
+
+.body-main-copy{
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 67%;
+    position: absolute;
+    background: #292727;
+    border-radius: 50%;
+    z-index: -1;
+  }
 
 .left-hand{
     position: absolute;
@@ -170,8 +180,6 @@
 
 .cap {
     position: absolute;
-    display: flex;
-    flex-direction: row;
     width: 40%;
     top: 14%;
     left: 30%;
