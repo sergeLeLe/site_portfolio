@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> АЗ Треугольник </title>
+
+<style>
+    .container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image {
+        min-width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="image">Вид треугольника</h1>
+    <p class="image">Введите три стороны треугольника</p>
+    <form id="form">
+        <input type="number" id="side1" placeholder="1-ая сторона...">
+        <input type="number" id="side2" placeholder="2-ая сторона...">
+        <input type="number" id="side3" placeholder="3-ая сторона...">
+        <button>Определить</button>
+    </form>
+    <div id="result" class="image"></div>
+</div>
+
+<script>
+    const side1 = document.querySelector('#side1');
+    const side2 = document.querySelector('#side2');
+    const side3 = document.querySelector('#side3');
+
+    const form = document.querySelector('#form');
+    const resultContainer = document.querySelector('#result');
+
+    form.addEventListener('submit', callBackFunc)
+
+    function callBackFunc(event) {
+        event.preventDefault();
+        let item;
+
+        let s1 = Number(side1.value)
+        let s2 = Number(side2.value)
+        let s3 = Number(side3.value)
+
+        if (s1 + s2 <= s3 || s1 + s3 <= s2 || s2 + s3 <= s1) {
+            item = './tr-4.jpg'; // не существует
+        } else if (s1 != s2 && s1 != s3 && s2!= s3) {
+            item = './tr-1.jpg'; // разносторонний
+        } else if (s1 == s2 && s1 == s3 && s2 == s3)  {
+            item = './tr-3.jpg'; // равносторонний 
+        } else {
+            item = './tr-2.jpg'; // равнобедренный
+        }
+
+        resultContainer.innerHTML = `<img src="${item}" alt="">`
+    }
+</script>
+</body>
+</html>
