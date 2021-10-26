@@ -2,9 +2,8 @@
     box-sizing: border-box; /* задает другой алгоритм расчета ширины и высоты элементов */
 }
 
-.logo {
-    /* display: flex; */
-}
+
+/* logo */
 
 .pac {
     width: 0; 
@@ -53,6 +52,8 @@
     transition: transform 1s linear;
 }
 
+/* main */
+
 body {
     background-color: #20202D; /* цвет фона   */
     margin: 0; /* отступ */
@@ -61,24 +62,13 @@ body {
 } 
 
 .container {
-    width: 90%;
+    width: 90%; /* отступы от шириныы экрана при сжатии */
     max-width: 945px; /* макс. ширина */
     margin: auto; /* отступы, авто слеваа и справа - по середине, и весь контент внутри тоже будет по середине всегда */
 
 }
 
-.section {
-    padding-top: 64px;
-    padding-bottom: 92px;
-}
-
-.section-title {
-    margin: 0;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-    margin-bottom: 20px;
-}
+/* header*/
 
 .hero {
     padding-top: 50px; /* внутренний(толкание внутреннго контента) отступ сверху от границ родителя до содержимого */
@@ -93,6 +83,12 @@ body {
     margin-bottom: 70px; /* внешний отступ от других блоков в этом же контейнере */
 }
 
+.menu-item {
+    text-decoration: none;
+    color: #fff!important;
+    margin: 0 20px;
+}
+
 .social-link {
     margin-left: 10px; /* внешн ие отступы (самих элементов) между иконками */
 }
@@ -101,7 +97,6 @@ body {
     margin-left: 0;
 }
 
-/* выравниваем элементы по горизонтали по краям и по центру */
 .hero-content {
     display: flex;
     justify-content: space-between;
@@ -131,18 +126,6 @@ body {
     margin-bottom: 38px;
 }
 
-.button {
-    background: linear-gradient(180deg, #FDDE76 0%, #FFBB01 100%);
-    box-shadow: 0px 4px 0px #B68500;
-    border: none;
-    border-radius: 5px 5px 10px 10px;
-    padding: 24px 42px; /* сверху-снизу, слева-справа */
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: uppercase;
-    font-weight: bold; /* жирность текста */
-}
-
 .hero-avatar {
     width: 389px;
     height: 389px; 
@@ -155,13 +138,9 @@ body {
     border: 11px solid #fff; 
 }
 
-.menu-item {
-    text-decoration: none;
-    color: #fff!important;
-    margin: 0 20px;
-}
-
 /* features */
+
+
 
 .features {
     background-color: #000;
@@ -175,31 +154,35 @@ body {
 }
 
 .features-item {
-    flex-basis: 49%;
+    flex-basis: 49%; /* расстояние между блоками флекса */
+}
+
+.section-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 20px;
 }
 
 .tablet {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: inline-block; /* перенос на след строку */
     background:darkslategrey;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 20px; /* отступы текста внутри */
     border-radius: 4px;
     margin-right: 5px;
     margin-top: 10px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 }
 
+
 .card-column {
-    box-sizing: content-box;
+    box-sizing: content-box; /* ???? */
     background:darkslategrey;
     border-radius: 4px;
     padding: 1px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 }
 
 .card-span-title {
@@ -208,7 +191,14 @@ body {
     color: #FFBB01;
 }
 
-/* contacts */
+
+/* footer */
+
+.contacts-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .contacts-form {
     background: #FFFFFF;
@@ -223,6 +213,27 @@ body {
     text-align: center ;
 }
 
+.button {
+    background: linear-gradient(180deg, #FDDE76 0%, #FFBB01 100%);
+    box-shadow: 0px 4px 0px #B68500;
+    border: none;
+    border-radius: 5px 5px 10px 10px;
+    padding: 24px 42px; /* сверху-снизу, слева-справа */
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    font-weight: bold; /* жирность текста */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .form-title {
     color: #000;
     font-weight: bold;
@@ -231,12 +242,6 @@ body {
     text-align: center;
     margin: 0;
     margin-bottom: 29px;
-}
-
-.contacts-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .contacts-data {
@@ -252,7 +257,7 @@ body {
 }
 
 .contacts-social {
-    flex-basis: 100%;
+    flex-basis: 100%; /* растягиваем на всю ширину блока */
 }
  
 .contacts-title {
@@ -268,10 +273,15 @@ body {
 }
 
 .contacts-link:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* подчеркивание */
 }
-/*  */
 
+/* slider */
+
+.section {
+    padding-top: 64px;
+    padding-bottom: 92px;
+}
 
 .projects {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 95.44%);
@@ -299,7 +309,8 @@ body {
     justify-content: center;
 }
 
-.projects-bullet {
+.projects-bullet { 
+    /* иконки для переключения */
     width: 10px;
     height: 10px;
     border: 2px solid #FFBB01;
@@ -312,15 +323,6 @@ body {
 
 .projects-bullet-active {
     background-color: #FFBB01;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* responsive */
