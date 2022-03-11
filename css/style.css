@@ -84,7 +84,7 @@ body {
 }
 
 .menu-item {
-    text-decoration: none;
+    text-decoration: none; /* убираем эффекты текста */
     color: #fff!important;
     margin: 0 20px;
 }
@@ -183,6 +183,8 @@ body {
     padding: 1px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 350px; /* растягивание слайдов на всю ширину */
+    flex: 1 1 auto; /* растягивание слайдов на всю ширину */
 }
 
 .card-span-title {

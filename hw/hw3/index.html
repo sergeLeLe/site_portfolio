@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="box">
+                <div class="one block"></div>
+                <div class="two block">
+                    <div class="results">
+                    </div>
+                </div>
+                <div class="three block">
+                    <form id="form">
+                        <input type= "text" id="input" placeholder="Ввод">
+                        <button>Разобрать</button>
+                    </form>
+                    <div class="buttons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        'use strict';
+
+        const input = document.querySelector('#input');
+        const form = document.querySelector('#form');
+        const results = document.querySelector('.results');
+        const buttons = document.querySelector('.buttons');
+
+        // компаратор для сортировки массива
+        function compare(array) {
+                array.sort((a, b) => {
+                    if (isNaN(a)) {
+                        if (isNaN(b)) {  // a and b are strings
+                            return a.localeCompare(b);
+                        } else {         // a string and b number
+                            return -1;  // a < b
+                        }
+                    } else {
+                        if (isNaN(b)) {  // a number and b string
+                            return 1;  // a > b
+                        } else {         // a and b are numbers
+                            return parseFloat(a) - parseFloat(b);
+                        }
+                    }
+                })
+                return array;
+            }
+
+        // обработчик массива
+        function arrHandler(array) {
+            array.forEach(function(item, index, arr) {
+                if (!isNaN(Number(item))) {
+                    array[index] = Number(item);
+                } else {
+                    array[index] = item.trim()
+                }
+            });
+            return array
+        }
+
+        // колбэк функция при нажатии на кнопку
+        function callBackClick(item) {
+            results.innerHTML += `<div class="result">${item}</div>`
+        }
+        
+        // отлавливаем событие нажатия на кнопку для отправки данных
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+
+            let map = new Map();
+            let data = input.value.split('-');
+
+            buttons.innerHTML = "";
+            results.innerHTML = "";
+
+            let sort_arr = compare(arrHandler(data));
+            
+            let last_num = 0;
+            sort_arr.forEach(function(item, index, arr) {
+                if (typeof item != "number") {
+                    map.set(`a${index + 1}`, item)
+                    last_num = index + 1
+                } else {
+                    map.set(`n${index + 1 - last_num}`, item)
+                }
+            });
+
+            for (let pair of map) {
+                buttons.innerHTML += `<div class="button" onclick="callBackClick('${pair[1]}')">${pair[0]} ${pair[1]}</div>`
+            };
+        })
+    </script>
+</body>
+</html>
