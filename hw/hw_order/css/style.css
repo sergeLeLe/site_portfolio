@@ -1,0 +1,74 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-left: 35%;
+    width: 500px;
+    height: 400px;
+    padding: 1%;
+    border: 4px solid black;
+    background-color: gray;
+    height: auto;
+}
+
+.result {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.field {
+    clear:both; 
+    text-align:right; 
+    line-height:40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+label {float:left; padding-right:10px;}
+.main {float:left}
+
+#btn {
+    margin-top: 10px;
+    margin-left: 25%;
+    width: 80px;
+    border-radius: 0px;
+}
+
+input {
+    width: 80px;
+    text-align:center;
+}
+
+.upper-text {
+    margin-left: 20%;
+}
+
+.lower-text {
+    margin-top: 10%;
+}
+
+.left-div {
+    padding: 2%;
+    border: 4px solid black;
+    width: 210px;
+    border-radius: 10px;
+    background-color:lightgray;
+    height: auto;
+}
+
+.right-div {
+    padding: 2%;
+    border: 4px solid black;
+    width: 210px;
+    border-radius: 10px;
+    background-color:lightgray;
+    height: auto;
+}
+
+.inner-div {
+    padding: 2%;
+    background-color: white;
+    margin: 10px;
+    width: 180px;
+    min-height: 300px;
+    position: relative;
+}
