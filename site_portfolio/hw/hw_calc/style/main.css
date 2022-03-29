@@ -1,0 +1,185 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.1em;
+}
+
+.header {
+	background: black;
+}
+
+.header h1{
+	color: white;
+	text-align: center;
+}
+
+.title p,
+.button p{
+	text-align: center;
+}
+
+.get-btn {
+	width: 195px;
+	margin: 0 auto;
+}
+
+.get-btn a:hover{
+	background: rgb(217, 94, 19);
+}
+
+.get-btn a{
+	color: white;
+	background: rgb(235, 108, 35);
+	font-size: 18px;
+	padding: 18px 30px;
+	margin-top: 80px;
+	font-weight: 700;
+	display: block;
+	width: 195px;
+	text-align: center;
+}
+
+.container, 
+.wrapper1,
+.wrapper2 {
+	width: 400px;
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	margin-top: 100px;
+	height: 330px;
+	background-color: #dbdb8c;
+}
+
+.wrapper1,
+.left-input-div,
+.right-input-div {
+	height: 150px;
+}
+
+.wrapper2,
+.left-options-div,
+.right-options-div {
+	height: 150px;
+}
+
+.left-input-div,
+.right-input-div {
+	display: inline;
+	width: 190px;
+}
+
+.right-input-div {
+	display: flex;
+}
+
+.left-options-div,
+.right-options-div {
+	width: 190px;
+}
+
+.wrapper1,
+.wrapper2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper2 {
+	height: 140px;
+}
+
+.button {
+	margin-top: 30px;
+	width: 150px;
+	height: 30px;
+}
+
+
+.wrapper1 input {
+	width: 100px;
+}
+
+.name {
+	margin-top: 50px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+.date {
+	margin-left: 30px;
+}
+
+.name p,
+.date p {
+	display: inline-block;
+	width: 40px;
+}
+
+.file p,
+.wrapper2 p {
+	text-align: center;
+}
+
+.file {
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.right-options-div p {
+	margin-bottom: 20px;
+}
+
+.left-options-div input{
+	margin-top: 10px;
+	margin-left: 40px;
+}
+
+.right-options-div input {
+	margin-top: 10px;
+	margin-left: 20px;	
+}
+
+.wrapper3 {
+	display: flex;
+}
+
+.button{
+	margin: 0 auto;
+}
+
+#file1 {
+	margin-top: 10px;
+	width: 100px;
+	height: 21px;
+}
+
+.second {
+	margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    margin-top: 100px;
+}
+
+table {
+	width: 400px;
+	height: 330px;
+}
+
+.radio-options {
+	display: flex;
+}
